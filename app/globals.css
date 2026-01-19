@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+* {
+  border-color: rgb(75 85 99);
+}
+
+.graffiti-heading {
+  font-size: 2.25rem;
+  font-weight: 700;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #FF006E, #8338EC, #FFBE0B, #06FFA5);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 8s ease infinite;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+  .graffiti-heading {
+    font-size: 3.75rem;
+  }
+}
+
+.graffiti-text {
+  font-family: 'Arial Black', sans-serif;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.spray-paint-border {
+  position: relative;
+  border: 3px solid transparent;
+  background: linear-gradient(#0a0a0a, #0a0a0a) padding-box,
+              linear-gradient(45deg, #FF006E, #8338EC, #FFBE0B) border-box;
+}
+
+.graffiti-button {
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.3s;
+  background: linear-gradient(to right, #FF006E, #B185FF, #8338EC);
+  color: white;
+  border-radius: 0.5rem;
+  font-family: 'Arial Black', sans-serif;
+}
+
+.graffiti-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px -3px rgba(131, 56, 236, 0.5);
+}
+
+.card-graffiti {
+  background-color: rgb(17 24 39);
+  border: 2px solid #B185FF;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: all 0.3s;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-graffiti:hover {
+  border-color: #FF006E;
+  box-shadow: 0 25px 50px -12px rgba(181, 133, 255, 0.3);
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #FF006E, #8338EC);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #8338EC, #06FFA5);
+}
+
